@@ -1,13 +1,27 @@
+/*
+Jonko Bear
+
+Rotates colors of two sets of WS2812 LEDs and creates smoldering effect on one LED. Uses 
+the FastLED library only.
+
+2024 by knokkelpronk
+*/
+
 #include "FastLED.h"
 
 uint8_t hue;
 
+// defines pins for led groups
 #define DATA_PIN1    12
 #define DATA_PIN2    11
 #define DATA_PIN3    10
+
 #define LED_TYPE    WS2812
+
+// to accomplish shifting the color cycle between groups 1 and 2
 #define COLOR_ORDER GRB
 #define COLOR_ORDER2 RGB
+
 #define NUM_LEDS    8
 #define NUM_LEDS2    8
 #define NUM_LEDS3    1
